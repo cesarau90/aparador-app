@@ -126,7 +126,8 @@ Responde SOLO con este JSON, sin texto antes ni después, sin markdown:
       setProductos((prev) => prev.map((x) => (x.id === id ? { ...x, ia, cargando: false } : x)));
       setAbierto(id);
       setError("");
-    } catch {
+    } catch (e) {
+      console.error(e);
       setProductos((prev) => prev.map((x) => (x.id === id ? { ...x, cargando: false } : x)));
       setError("No se pudo generar el contenido de " + p.nombre + ". Inténtalo otra vez.");
     }

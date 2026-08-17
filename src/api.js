@@ -1,4 +1,4 @@
-const GEMINI_MODEL = "gemini-2.0-flash";
+const GEMINI_MODEL = "gemini-flash-lite-latest";
 
 export async function pedirAClaude(prompt, maxTokens = 1000) {
   const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
